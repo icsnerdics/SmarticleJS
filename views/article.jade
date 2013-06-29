@@ -1,0 +1,23 @@
+doctype 5
+html
+    head
+        title= title
+        link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+        link(rel='stylesheet', href='/stylesheets/common.css')
+        link(rel='stylesheet', href='/stylesheets/article.css')
+    body.container
+            #wrapper.row-fluid
+                #leftcolumn.span9
+                    section#content.row-fluid
+                        h1 #{title}
+                        a#thumbnail(href=url,target="_blank")
+                            img.span4(src=thumbnail,alt=title)
+                        .span8
+                            p #{text}
+                                a(href=url,target="_blank") [leggi ancora...]
+                #rightcolumn.span3
+                    img(src="https://i.chzbgr.com/maxW500/5078272256/h7360503B/")
+                    img(src="http://fc05.deviantart.net/fs70/f/2010/357/8/d/you_are_our_1_000_000_visitor_by_bluewolffantasy-d35ilr3.png")
+            footer#footer.row-fluid
+                div Copyright &copy; 2013 &nbsp;
+                    a(href="#") My Company

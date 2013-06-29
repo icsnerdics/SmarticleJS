@@ -1,0 +1,49 @@
+doctype 5
+html
+    head
+        title= title
+        link(rel='stylesheet', href='/stylesheets/common.css')
+        link(rel='stylesheet', href='/stylesheets/admin.css')
+        script(type='text/javascript', src='/js/jquery.js')
+        script(type='text/javascript', src='/js/underscore.js')
+        script(type='text/javascript', src='/js/backbone.js')
+        script(type='text/javascript', src='/js/admin.js')
+        script(type='text/template', id='menu-article-template')
+            button.btn.input-block-level
+                {{title}}
+        script(type='text/template', id='article-editor-template')
+            h3.article-title {{title}}
+            h6 //#{siteurl}/{{id}}
+            .row-fluid
+                .span3.thumbnail
+                    img.article-thumbnail(src="{{thumbnail}}")
+                    input.thumburl(type="text",name="thumbnail",placeholder="thumbnail",value="{{thumbnail}}")
+                .span9.row-fluid
+                    .span9
+                        input.input-block-level.article-url(name="url",type="text",placeholder="url",value="{{url}}")
+                    .span1
+                        button.btn.btn-success.input-block-level.save
+                            i.icon-check.icon-white
+                    .span1
+                        a.article-preview(target="_blank",href="/{{id}}")
+                            button.btn.btn-primary.input-block-level
+                                i.icon-eye-open.icon-white
+                    .span1
+                        button.btn.btn-danger.input-block-level.remove
+                            i.icon-trash.icon-white
+                    input.input-block-level.article-title(type="text",name="title",placeholder="title",value="{{title}}")
+                    textarea.categories.input-block-level(rows=2)
+            textarea.article-text.input-block-level(placeholder="text")
+                {{text}}
+    body
+        .container-fluid
+            h1.title Smarticle CMS
+            .row-fluid
+                #sidebar.span3
+                    h3 Articles
+                    input#filterArticles.search-query.input-block-level(type="text",placeholder="Filter...")
+                    ul.articles
+                    button#create-new-article.btn.input-block-level
+                        i.icon-plus
+
+                #editor.span9

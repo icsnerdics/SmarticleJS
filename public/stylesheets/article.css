@@ -1,0 +1,51 @@
+
+body {
+
+    background: url('../img/sun_small.jpg') repeat center center;
+    color: #bbb;
+}
+
+nav {
+    /*			background-color: rgba(31, 31, 41, 0.8);*/
+    height: 100%;
+}
+
+section {
+    height: 100%;
+}
+
+h1 {
+    /*font-family: 'Waiting for the Sunrise', cursive;*/
+    font-family: 'Open Sans', sans-serif;
+}
+
+#wrapper {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#content a#thumbnail > img {
+    border-radius: 8px;
+    border: 2px solid rgba(62,62,82,0.6);
+}
+
+#leftcolumn {
+    font-weight: 300;
+}
+
+#rightcolumn {
+    text-align: center;
+}
+
+#footer {
+    height: 30px;
+    line-height: 30px;
+    border-top: 1px solid rgba(62, 62, 82, 0.5);
+    font-weight: 300;
+    font-size: 12px;
+    margin-top: 15px;
+}
+
+#footer > div {
+    padding: 15px;
+}

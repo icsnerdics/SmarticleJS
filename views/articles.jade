@@ -1,0 +1,12 @@
+doctype 5
+html
+    head
+        title= title
+        link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+        link(rel='stylesheet', href='/stylesheets/common.css')
+        link(rel='stylesheet', href='/stylesheets/article.css')
+    body
+        ul
+            - for (var i in articles)
+                li
+                    a(href="/" + encodeURIComponent(i))= articles[i].title
